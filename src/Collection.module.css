@@ -1,0 +1,103 @@
+.collectionContainer {
+  padding: 2rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.cardGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 220px;
+  height: 310px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.cardHoverInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .cardHoverInfo {
+  opacity: 1;
+}
+
+.priceInfo p {
+  margin: 0.5rem 0;
+  font-size: 14px;
+}
+
+.editButton,
+.deleteButton {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0.5rem;
+}
+
+.editButton:hover,
+.deleteButton:hover {
+  background-color: #0056b3;
+}
+
+/* Specific styling for delete button */
+.deleteButton {
+  background-color: #dc3545;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+/* Style for the collection link */
+.homeLink {
+  position: absolute;
+  top: 1rem; /* Adjust this value for desired distance from the top */
+  right: 1rem; /* Adjust this value for desired distance from the right */
+  font-size: 1rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none; /* Removes underline */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the link */
+.homeLink:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darken the background on hover */
+}
+

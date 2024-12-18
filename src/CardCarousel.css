@@ -1,0 +1,107 @@
+/* Card styling */
+body {
+    overflow: hidden; /* Hide scrollbars */
+    background-image: url('https://wallpapers.com/images/featured/cool-white-background-ingbh7qw7if21dkn.jpg');
+    background-size: cover;
+}
+
+.card {
+    width: 16.2rem;
+    height: 22.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    background-size: cover;  /* Make sure the image covers the entire card */
+    background-repeat: no-repeat;  /* Prevent image repetition */
+    background-position: center;  /* Center the image within the card */
+    background-color: #fff;  /* Ensure no white edges if the image is small */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* The wrapper around the card to control scaling */
+.card-wrapper {
+    position: relative;
+}
+
+/* Hover effect for the card */
+.card-wrapper:hover .card {
+    transform: scale(1.1);
+    z-index: 10;  /* Makes sure the card is above other cards */
+}
+
+/* The info box that will slide out */
+.card-wrapper .info-box {
+    position: absolute;
+    bottom: -4rem; /* Position the box just below the card */
+    left: 0;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background */
+    color: #fff;
+    border-radius: 8px;
+    transform: translateY(10px); /* Start hidden below the card */
+    visibility: hidden;
+    transition: transform 0.3s ease 0.3s, visibility 0s 0.3s; /* Delay appearance of the info box */
+}
+
+/* Slide the info box up after the card reaches its max size */
+.card-wrapper:hover .info-box {
+    transform: translateY(0); /* Move the box into view */
+    visibility: visible;
+    transition: transform 0.3s ease; /* Smooth transition for sliding effect */
+}
+
+/* Styling for the price and add button inside the info box */
+.card-wrapper .info-box .price {
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-wrapper .info-box .add-button {
+    background-color: #4CAF50;  /* Green background */
+    color: white;
+    border: none;
+    padding: 3px 8px;  /* Smaller button */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.875rem;  /* Smaller text */
+    margin-left: 10px;  /* Space between price and button */
+}
+
+.card-wrapper .info-box .add-button:hover {
+    background-color: #45a049;  /* Slightly darker green */
+}
+
+.mySwiper {
+    overflow: visible !important;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the collection link */
+.collection-link {
+    position: absolute;
+    top: 1rem; /* Adjust this value for desired distance from the top */
+    right: 1rem; /* Adjust this value for desired distance from the right */
+    font-size: 1rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none; /* Removes underline */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the link */
+.collection-link:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken the background on hover */
+}

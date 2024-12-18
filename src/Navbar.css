@@ -1,0 +1,85 @@
+/* Basic Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #333;
+    padding: 1rem;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .navbar-brand a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-item {
+    margin: 0;
+  }
+  
+  .navbar-links {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links:hover {
+    color: #f1c40f;
+  }
+  
+  /* Hamburger Menu (Mobile) */
+  .navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+  }
+  
+  /* Mobile Styles */
+  @media screen and (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 20px;
+    }
+  
+    .navbar-menu.active {
+      display: flex;
+    }
+  
+    .navbar-toggle {
+      display: flex;
+    }
+  }
+  
